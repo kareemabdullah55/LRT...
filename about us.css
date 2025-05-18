@@ -222,7 +222,8 @@ body {
 
 .founder-gallery img {
   width: 100%;
-  height: 240px;
+  height: auto;  /* Changed to auto for responsive */
+  max-height: 240px;
   object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
@@ -306,5 +307,16 @@ body {
 
   .mv-section > div {
     padding: 1rem 1.2rem;
+  }
+  
+  /* Make founder gallery single column on small screens */
+  .founder-gallery {
+    grid-template-columns: 1fr; /* Single column */
+  }
+
+  .founder-gallery img {
+    max-height: none;
+    height: auto;
+    width: 100%;
   }
 }
